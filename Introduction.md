@@ -1,0 +1,2 @@
+_Persistence_ is a tactic [TA0003] used to maintain access to a compromised system across reboots and other interruptions.  Techniques typically involve making configuration changes that will re-execute a payload on a pre-defined trigger or event.  Persistence is important, particularly for long-term access, because an adversary may not be able to reliably regain a foothold via their initial access technique.
+
