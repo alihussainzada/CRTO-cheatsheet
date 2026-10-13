@@ -1,0 +1,1 @@
+Once privileged access has been obtained on a computer, it can be useful to add another round of persistence to ensure that level of privilege can be maintained.  This can be useful in cases where the initial elevation method may become patched, mitigated, or is loud to perform multiple times.
