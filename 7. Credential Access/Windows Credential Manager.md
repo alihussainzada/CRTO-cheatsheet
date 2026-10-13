@@ -1,0 +1,31 @@
+The Windows Credential Manager stores other credentials that the user has asked Windows to save, such as those for Remote Desktop connections.  An adversary may decrypt these credentials to recover the plaintext credentials [T1555.004]
+
+The native `vaultcmd` utility will show the presence of any saved credentials.
+```
+beacon> run vaultcmd /listcreds:"Windows Credentials" /all
+```
+> Remember: Enumeration reveals the presence and metadata of saved credentials, not necessarily their plaintext passwords.
+
+As too will Seatbelt's `WindowsVault` command.
+```
+beacon> execute-assembly C:\Tools\Seatbelt\Seatbelt\bin\Release\Seatbelt.exe WindowsVault
+```
+> Key point: `vaultcmd` and Seatbelt help identify saved credentials and their targets. They do not guarantee that plaintext passwords will be displayed.
+
+Credential blobs are protected using DPAPI (Data Protection API) and an additional encryption layer. 
+To recover the plaintext credential, the decryption process generally requires:
+
+1. Locate the saved credential blob.
+2. Identify the DPAPI master key referenced by the blob.
+3. Decrypt or obtain access to the master key.
+4. Recover the AES key.
+5. Decrypt the credential blob.
+
+Luckily, tools like SharpDPAPI automate that process.
+```
+beacon> execute-assembly C:\Tools\SharpDPAPI\SharpDPAPI\bin\Release\SharpDPAPI.exe credentials /rpc
+```
+
+> This technique can be used from a medium-integrity context.
+
+
