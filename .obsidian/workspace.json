@@ -69,16 +69,58 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 .Persistence/2 .Boot & Logon Autostart Execution.md",
+                "file": "Elevated Persistence/1 .Scheduled Task.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 .Boot & Logon Autostart Execution"
+              "title": "1 .Scheduled Task"
+            }
+          },
+          {
+            "id": "8155dadd3606ac24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Elevated Persistence/2 .Windows Service.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2 .Windows Service"
+            }
+          },
+          {
+            "id": "458c25f3694aa86d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Elevated Persistence/2 .Windows Service.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2 .Windows Service"
+            }
+          },
+          {
+            "id": "0ac9283c37165842",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Elevated Persistence/3 .Windows Management Instrumentation (WMI).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3 .Windows Management Instrumentation (WMI)"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -245,8 +287,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "e68a699416dac4a4",
+  "active": "3730dcfe2a18824b",
   "lastOpenFiles": [
+    "Elevated Persistence",
+    "Elevated Persistence/2 .Windows Service.md",
+    "Elevated Persistence/3 .Windows Management Instrumentation (WMI).md",
+    "5 .Privilege Escalation/Lab.md",
+    "Elevated Persistence/1 .Scheduled Task.md",
+    "3 .Persistence/2 .Boot & Logon Autostart Execution.md",
     "3 .Persistence/1 .Introduction.md",
     "5 .Privilege Escalation/5 .User Account Control (UAC).md",
     "4 .Post Exploitation/3. All Notes.md",
@@ -257,11 +305,9 @@
     "5 .Privilege Escalation/1 .Path Interception.md",
     "5 .Privilege Escalation/0 .Intoduction.md",
     "3 .Persistence/4 .Scheduled Task.md",
-    "Scheduled Task.md",
-    "Introduction.md",
+    "Elevated Persistence/0 .Introduction.md",
     "6 .Elevated Persistence",
     "5 .Privilege Escalation/4 .Software Vulnerabilities.md",
-    "3 .Persistence/2 .Boot & Logon Autostart Execution.md",
     "5 .Privilege Escalation",
     "1 .Defence Evasion/Defence Evasion.md",
     "4 .Post Exploitation",
@@ -273,7 +319,6 @@
     "2 .Initial Access/3 .Triggers.md",
     "3 .Persistence",
     "2 .Initial Access/2. Droppers.md",
-    "2 .Initial Access/1. Payload.md",
     "1 .Defence Evasion",
     "2 .Initial Access",
     "3 .Persistence"
