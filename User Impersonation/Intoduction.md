@@ -1,0 +1,2 @@
+_User Impersonation_, or _Use Alternate Authentication Material_ as MITRE puts it, is a tactic [T1550] for leveraging the credential material obtained during _[Credential Access](https://www.zeropointsecurity.co.uk/path-player?courseid=red-team-ops&unit=674b78a7d9f99e969c066ebf)_.  Once an adversary has obtained credentials such as plaintext passwords, hashes, or Kerberos tickets, they need to use that credential to assume the identity of the user to whom they belong.
+

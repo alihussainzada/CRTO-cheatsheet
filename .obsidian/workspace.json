@@ -50,133 +50,49 @@
             }
           },
           {
-            "id": "6f5666da24103dc2",
+            "id": "b7539420f2061cab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction.md",
+                "file": "User Impersonation/Token Impersonation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction"
+              "title": "Token Impersonation"
             }
           },
           {
-            "id": "e68a699416dac4a4",
+            "id": "20c99f3618743e3b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Elevated Persistence/1 .Scheduled Task.md",
+                "file": "Pass the Hash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 .Scheduled Task"
+              "title": "Pass the Hash"
             }
           },
           {
-            "id": "8155dadd3606ac24",
+            "id": "4568ed5f64d7b994",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Elevated Persistence/2 .Windows Service.md",
+                "file": "Pass the Ticket.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 .Windows Service"
-            }
-          },
-          {
-            "id": "458c25f3694aa86d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Elevated Persistence/2 .Windows Service.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 .Windows Service"
-            }
-          },
-          {
-            "id": "0ac9283c37165842",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Elevated Persistence/3 .Windows Management Instrumentation (WMI).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3 .Windows Management Instrumentation (WMI)"
-            }
-          },
-          {
-            "id": "6bf7fe0ccd029003",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7. Credential Access/Introduction.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction"
-            }
-          },
-          {
-            "id": "1fd1d1e5a65925f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7. Credential Access/Credentials from Web Browsers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Credentials from Web Browsers"
-            }
-          },
-          {
-            "id": "360d413e95bf29c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7. Credential Access/Windows Credential Manager.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Credential Manager"
-            }
-          },
-          {
-            "id": "8bc118ce428f5413",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS Credential Dumping.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "OS Credential Dumping"
+              "title": "Pass the Ticket"
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -343,18 +259,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "8bc118ce428f5413",
+  "active": "4568ed5f64d7b994",
   "lastOpenFiles": [
-    "7. Credential Access/Windows Credential Manager.md",
-    "OS Credential Dumping.md",
-    "7. Credential Access/Credentials from Web Browsers.md",
-    "7. Credential Access/Introduction.md",
+    "Pass the Hash.md",
+    "Pass the Ticket.md",
+    "User Impersonation/Token Impersonation.md",
+    "User Impersonation/Intoduction.md",
+    "7. Credential Access/4 .Kerberos Tickets.md",
+    "7. Credential Access/3 .OS Credential Dumping.md",
     "6. Elevated Persistence/3 .Windows Management Instrumentation (WMI).md",
+    "6. Elevated Persistence/2 .Windows Service.md",
+    "6. Elevated Persistence/1 .Scheduled Task.md",
+    "User Impersonation",
+    "7. Credential Access/1 .Credentials from Web Browsers.md",
+    "OS Credential Dumping/Introduction.md",
+    "OS Credential Dumping",
+    "7. Credential Access/2 .Windows Credential Manager.md",
+    "7. Credential Access/0 .Introduction.md",
     "7. Credential Access",
     "6. Elevated Persistence",
-    "6. Elevated Persistence/2 .Windows Service.md",
     "5 .Privilege Escalation/Lab.md",
-    "6. Elevated Persistence/1 .Scheduled Task.md",
     "3 .Persistence/2 .Boot & Logon Autostart Execution.md",
     "3 .Persistence/1 .Introduction.md",
     "5 .Privilege Escalation/5 .User Account Control (UAC).md",
@@ -368,17 +292,10 @@
     "3 .Persistence/4 .Scheduled Task.md",
     "6. Elevated Persistence/0 .Introduction.md",
     "6 .Elevated Persistence",
-    "5 .Privilege Escalation/4 .Software Vulnerabilities.md",
     "5 .Privilege Escalation",
-    "1 .Defence Evasion/Defence Evasion.md",
     "4 .Post Exploitation",
-    "3 .Persistence/5 .Com Hijacking.md",
-    "T1546.015.md",
-    "3 .Persistence/3 .PowerShell Profile.md",
-    "2 .Initial Access/5 .Delivery.md",
     "3 .Persistence",
     "1 .Defence Evasion",
-    "2 .Initial Access",
-    "3 .Persistence"
+    "2 .Initial Access"
   ]
 }
