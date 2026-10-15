@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. Introduction.md",
+                "file": "11. Pivoting/0. Introduction.md",
                 "mode": "source",
                 "source": false
               },
@@ -69,12 +69,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. SOCKS.md",
+                "file": "11. Pivoting/1. SOCKS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "1. SOCKS"
+            }
+          },
+          {
+            "id": "abc23b89755a81bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11. Pivoting/2.  Reverse Port Forwards.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2.  Reverse Port Forwards"
+            }
+          },
+          {
+            "id": "561bdb16508c905c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1.  Unconstrained Delegation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1.  Unconstrained Delegation"
             }
           },
           {
@@ -92,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -259,12 +287,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "c40865c6e74df2f7",
+  "active": "561bdb16508c905c",
   "lastOpenFiles": [
-    "0. Introduction.md",
-    "1. SOCKS.md",
+    "11. Pivoting/2.  Reverse Port Forwards.md",
+    "1.  Unconstrained Delegation.md",
+    "12. Kerberoas",
+    "11. Pivoting/1. SOCKS.md",
+    "11. Pivoting/0. Introduction.md",
     "10. Lateral Movement/1.  Windows Remote Management.md",
-    "Pivoting",
+    "11. Pivoting",
     "10. Lateral Movement/4. LOLBAS.md",
     "10. Lateral Movement/3. Custom Techniques.md",
     "10. Lateral Movement/2.  PsExec.md",
@@ -290,12 +321,9 @@
     "7. Credential Access/1 .Credentials from Web Browsers.md",
     "OS Credential Dumping/Introduction.md",
     "OS Credential Dumping",
-    "7. Credential Access/2 .Windows Credential Manager.md",
-    "7. Credential Access/0 .Introduction.md",
     "7. Credential Access",
     "6. Elevated Persistence",
     "6 .Elevated Persistence",
-    "5 .Privilege Escalation",
-    "4 .Post Exploitation"
+    "5 .Privilege Escalation"
   ]
 }
