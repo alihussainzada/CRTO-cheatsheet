@@ -41,26 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10. Lateral Movement/1.  Windows Remote Management.md",
+                "file": "10. Lateral Movement/3. Custom Techniques.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.  Windows Remote Management"
-            }
-          },
-          {
-            "id": "fef8623e8b931a50",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Constrained Delegation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2. Constrained Delegation"
+              "title": "3. Custom Techniques"
             }
           },
           {
@@ -78,63 +64,35 @@
             }
           },
           {
-            "id": "abc23b89755a81bf",
+            "id": "d3a77c1cd5585f2d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11. Pivoting/2.  Reverse Port Forwards.md",
+                "file": "4.  Resource-Based Constrained Delegation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.  Reverse Port Forwards"
+              "title": "4.  Resource-Based Constrained Delegation"
             }
           },
           {
-            "id": "561bdb16508c905c",
+            "id": "0cfd1a03a8c7e9c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8. User Impersonation/4 .Process Injection.md",
+                "file": "3.  S4U2self Computer Takeover.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 .Process Injection"
-            }
-          },
-          {
-            "id": "5e43dae64e0e9f88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Constrained Delegation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2. Constrained Delegation"
-            }
-          },
-          {
-            "id": "348d9874e1c1c408",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10. Lateral Movement/5. Security Logon Types.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "5. Security Logon Types"
+              "title": "3.  S4U2self Computer Takeover"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -301,22 +259,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "fef8623e8b931a50",
+  "active": "0cfd1a03a8c7e9c3",
   "lastOpenFiles": [
+    "4.  Resource-Based Constrained Delegation.md",
+    "3.  S4U2self Computer Takeover.md",
     "8. User Impersonation/3 .Pass the Ticket.md",
+    "10. Lateral Movement/3. Custom Techniques.md",
+    "10. Lateral Movement/5. Security Logon Types.md",
     "2. Constrained Delegation.md",
+    "8. User Impersonation/4 .Process Injection.md",
+    "11. Pivoting/2.  Reverse Port Forwards.md",
+    "10. Lateral Movement/1.  Windows Remote Management.md",
     "8. User Impersonation/2 .Pass the Hash.md",
     "11. Pivoting/1. SOCKS.md",
     "1.  Unconstrained Delegation.md",
-    "10. Lateral Movement/3. Custom Techniques.md",
-    "8. User Impersonation/4 .Process Injection.md",
     "11. Pivoting/0. Introduction.md",
-    "11. Pivoting/2.  Reverse Port Forwards.md",
     "6. Elevated Persistence/3 .Windows Management Instrumentation (WMI).md",
-    "10. Lateral Movement/5. Security Logon Types.md",
     "10. Lateral Movement/4. LOLBAS.md",
     "10. Lateral Movement/2.  PsExec.md",
-    "10. Lateral Movement/1.  Windows Remote Management.md",
     "8. User Impersonation/1 .Token Impersonation.md",
     "12. Kerberoas",
     "11. Pivoting",
@@ -331,9 +291,7 @@
     "8. User Impersonation/0 .Intoduction.md",
     "7. Credential Access/3 .OS Credential Dumping.md",
     "6. Elevated Persistence/2 .Windows Service.md",
-    "6. Elevated Persistence/1 .Scheduled Task.md",
     "8. User Impersonation",
-    "7. Credential Access/1 .Credentials from Web Browsers.md",
     "OS Credential Dumping",
     "7. Credential Access",
     "6. Elevated Persistence",
