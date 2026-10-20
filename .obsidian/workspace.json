@@ -111,7 +111,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. Introduction.md",
+                "file": "16. Forest & Domain Trusts/0. Introduction.md",
                 "mode": "source",
                 "source": false
               },
@@ -125,7 +125,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. Inter-Realm Tickets.md",
+                "file": "16. Forest & Domain Trusts/1. Inter-Realm Tickets.md",
                 "mode": "source",
                 "source": false
               },
@@ -139,7 +139,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.  Parent, Child Trusts.md",
+                "file": "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
                 "mode": "source",
                 "source": false
               },
@@ -329,14 +329,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "bb25186ab4333578",
+  "active": "3730dcfe2a18824b",
   "lastOpenFiles": [
+    "16. Forest & Domain Trusts/0. Introduction.md",
+    "16. Forest & Domain Trusts/1. Inter-Realm Tickets.md",
+    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
     "3 .Persistence/2 .Boot & Logon Autostart Execution.md",
     "6. Elevated Persistence/3 .Windows Management Instrumentation (WMI).md",
     "6. Elevated Persistence/2 .Windows Service.md",
-    "2.  Parent, Child Trusts.md",
-    "1. Inter-Realm Tickets.md",
-    "0. Introduction.md",
     "15. Active Directory Certificate Services/6. Golden Certificates.md",
     "16. Forest & Domain Trusts",
     "12. Kerberoas/2. Constrained Delegation.md",
