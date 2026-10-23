@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
+                "file": "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. ESC1 - Misconfigured 'Client Authentication' Templates"
+              "title": "2.  Parent, Child Trusts"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12. Kerberoas/2. Constrained Delegation.md",
+                "file": "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Constrained Delegation"
+              "title": "4. Outbound Trust ( we are trusting)"
             }
           },
           {
@@ -119,7 +119,8 @@
               "title": "1. Policy Enumeration"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -286,19 +287,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "c3815e6739afb137",
+  "active": "fb3d18a17bc0e449",
   "lastOpenFiles": [
+    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
+    "16. Forest & Domain Trusts/3. Inbound Trust.md",
+    "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
+    "12. Kerberoas/2. Constrained Delegation.md",
+    "10. Lateral Movement/3. Custom Techniques.md",
+    "16. Forest & Domain Trusts/0. Introduction.md",
     "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
     "15. Active Directory Certificate Services/4. ESC4 - Certificate Template Access Control.md",
     "15. Active Directory Certificate Services/3. ESC2 - Misconfigured 'Any Purpose' Templates.md",
     "15. Active Directory Certificate Services/2. ESC3 - Misconfigured 'Certificate Request Agent' Templates.md",
-    "10. Lateral Movement/3. Custom Techniques.md",
     "15. Active Directory Certificate Services/0. Introduction (Enumeration).md",
     "13. Microsoft SQL Server/3.  Privilege Escalation.md",
     "13. Microsoft SQL Server/2.  Linked Servers.md",
     "13. Microsoft SQL Server/1.  Code Execution.md",
-    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
-    "16. Forest & Domain Trusts/3. Inbound Trust.md",
     "13. Microsoft SQL Server/0. Introduction (enumeration).md",
     "1 .Defence Evasion/Defence Evasion.md",
     "2 .Initial Access/2. Droppers.md",
@@ -310,10 +314,7 @@
     "17. AppLocker/1. Policy Enumeration.md",
     "17. AppLocker/0. Introduction.md",
     "Untitled.md",
-    "16. Forest & Domain Trusts/4. Outbound Trust (not-complete).md",
     "16. Forest & Domain Trusts/1. Inter-Realm Tickets.md",
-    "16. Forest & Domain Trusts/0. Introduction.md",
-    "15. Active Directory Certificate Services/6. Golden Certificates.md",
     "17. AppLocker",
     "16. Forest & Domain Trusts",
     "15. Active Directory Certificate Services",
