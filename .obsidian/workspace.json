@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "15. Active Directory Certificate Services/3. ESC2 - Misconfigured 'Any Purpose' Templates.md",
+                "file": "7. Credential Access/4 .Kerberos Tickets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. ESC2 - Misconfigured 'Any Purpose' Templates"
+              "title": "4 .Kerberos Tickets"
             }
           },
           {
@@ -154,7 +154,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "inject",
+                "query": "kerberoas",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,7 +178,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -289,15 +290,17 @@
   },
   "active": "fb3d18a17bc0e449",
   "lastOpenFiles": [
-    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
-    "16. Forest & Domain Trusts/3. Inbound Trust.md",
+    "7. Credential Access/4 .Kerberos Tickets.md",
     "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
+    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
+    "7. Credential Access/0 .Introduction.md",
+    "15. Active Directory Certificate Services/3. ESC2 - Misconfigured 'Any Purpose' Templates.md",
     "12. Kerberoas/2. Constrained Delegation.md",
+    "16. Forest & Domain Trusts/3. Inbound Trust.md",
     "10. Lateral Movement/3. Custom Techniques.md",
     "16. Forest & Domain Trusts/0. Introduction.md",
     "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
     "15. Active Directory Certificate Services/4. ESC4 - Certificate Template Access Control.md",
-    "15. Active Directory Certificate Services/3. ESC2 - Misconfigured 'Any Purpose' Templates.md",
     "15. Active Directory Certificate Services/2. ESC3 - Misconfigured 'Certificate Request Agent' Templates.md",
     "15. Active Directory Certificate Services/0. Introduction (Enumeration).md",
     "13. Microsoft SQL Server/3.  Privilege Escalation.md",
@@ -313,8 +316,6 @@
     "17. AppLocker/2.  Policy Bypasses.md",
     "17. AppLocker/1. Policy Enumeration.md",
     "17. AppLocker/0. Introduction.md",
-    "Untitled.md",
-    "16. Forest & Domain Trusts/1. Inter-Realm Tickets.md",
     "17. AppLocker",
     "16. Forest & Domain Trusts",
     "15. Active Directory Certificate Services",
