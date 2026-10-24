@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
+                "file": "1 .Defence Evasion/Defence Evasion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.  Parent, Child Trusts"
+              "title": "Defence Evasion"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12. Kerberoas/2. Constrained Delegation.md",
+                "file": "7. Credential Access/4 .Kerberos Tickets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Constrained Delegation"
+              "title": "4 .Kerberos Tickets"
             }
           },
           {
@@ -69,12 +69,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7. Credential Access/4 .Kerberos Tickets.md",
+                "file": "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 .Kerberos Tickets"
+              "title": "2.  Parent, Child Trusts"
+            }
+          },
+          {
+            "id": "59752ee85204deb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CRTO EXAM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CRTO EXAM"
             }
           },
           {
@@ -97,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10. Lateral Movement/3. Custom Techniques.md",
+                "file": "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Custom Techniques"
+              "title": "1. ESC1 - Misconfigured 'Client Authentication' Templates"
             }
           },
           {
@@ -120,7 +134,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -178,8 +192,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -288,34 +301,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "fb3d18a17bc0e449",
+  "active": "d76b11dd15936b8a",
   "lastOpenFiles": [
-    "7. Credential Access/4 .Kerberos Tickets.md",
-    "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
-    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
+    "7. Credential Access/2 .Windows Credential Manager.md",
+    "5 .Privilege Escalation/3 .DLL Search Order Hijacking.md",
+    "5 .Privilege Escalation/1 .Path Interception.md",
+    "5 .Privilege Escalation/0 .Intoduction.md",
+    "5 .Privilege Escalation/5 .User Account Control (UAC).md",
+    "7. Credential Access/3 .OS Credential Dumping.md",
+    "7. Credential Access/1 .Credentials from Web Browsers.md",
+    "5 .Privilege Escalation/Lab.md",
+    "5 .Privilege Escalation/4 .Software Vulnerabilities.md",
+    "5 .Privilege Escalation/2 .Weak Service Permissions.md",
+    "CRTO EXAM.md",
+    "9. Discovery/1. Lightweight Directory Access Protocol (LDAP).md",
+    "9. Discovery/0. Introduction.md",
     "7. Credential Access/0 .Introduction.md",
-    "15. Active Directory Certificate Services/3. ESC2 - Misconfigured 'Any Purpose' Templates.md",
-    "12. Kerberoas/2. Constrained Delegation.md",
-    "16. Forest & Domain Trusts/3. Inbound Trust.md",
-    "10. Lateral Movement/3. Custom Techniques.md",
-    "16. Forest & Domain Trusts/0. Introduction.md",
-    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
-    "15. Active Directory Certificate Services/4. ESC4 - Certificate Template Access Control.md",
-    "15. Active Directory Certificate Services/2. ESC3 - Misconfigured 'Certificate Request Agent' Templates.md",
-    "15. Active Directory Certificate Services/0. Introduction (Enumeration).md",
-    "13. Microsoft SQL Server/3.  Privilege Escalation.md",
-    "13. Microsoft SQL Server/2.  Linked Servers.md",
-    "13. Microsoft SQL Server/1.  Code Execution.md",
-    "13. Microsoft SQL Server/0. Introduction (enumeration).md",
-    "1 .Defence Evasion/Defence Evasion.md",
-    "2 .Initial Access/2. Droppers.md",
-    "2 .Initial Access/1. Payload.md",
-    "8. User Impersonation/0 .Intoduction.md",
-    "8. User Impersonation/3 .Pass the Ticket.md",
-    "8. User Impersonation/4 .Process Injection.md",
     "17. AppLocker/2.  Policy Bypasses.md",
+    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
+    "16. Forest & Domain Trusts/1. Inter-Realm Tickets.md",
+    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
+    "1 .Defence Evasion/Defence Evasion.md",
+    "Pasted image 20261024103231.png",
+    "Pasted image 20261024102914.png",
+    "7. Credential Access/4 .Kerberos Tickets.md",
     "17. AppLocker/1. Policy Enumeration.md",
     "17. AppLocker/0. Introduction.md",
+    "15. Active Directory Certificate Services/2. ESC3 - Misconfigured 'Certificate Request Agent' Templates.md",
+    "10. Lateral Movement/3. Custom Techniques.md",
+    "12. Kerberoas/2. Constrained Delegation.md",
+    "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
     "17. AppLocker",
     "16. Forest & Domain Trusts",
     "15. Active Directory Certificate Services",

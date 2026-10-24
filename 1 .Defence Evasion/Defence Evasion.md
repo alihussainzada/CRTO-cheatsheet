@@ -21,6 +21,21 @@ Find the code and to narrow it more, use the specific hex code which caused the 
 
 Build again! Run the ThreatCheck Again!
 
+### For loop of the lap
+```
+x = length;
+while ( x-- ) {
+  * ( ( char * ) buffer + x) = * ( ( char * ) buffer + x ) ^ key [ x % 8 ];
+}
+```
+
+118 line
+```
+int x = length;
+while ( x-- ) {
+  * ( ( char * ) ptr + x ) = * ( ( char * ) buffer + x ) ^ key [ x % 8 ];
+}
+```
 # Resource Kit
 The resource kit is used to modify the script templates.
 The build script for the resource kit only requires an output directory.
@@ -266,6 +281,10 @@ powerpick start-sleep -s 60
 - Choose process behavior based on the target environment and the activity being performed.
 - C2 profile settings alone do not guarantee stealth; command lines, process creation, memory activity, and endpoint telemetry can still reveal suspicious behavior.
 
+Use this too:
+```
+set tasks_max_size "2097152";
+```
 ## The Lab C2 Profile
 ```
  stage {
