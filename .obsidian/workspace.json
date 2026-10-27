@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9. Discovery/2. BOFHound.md",
+                "file": "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. BOFHound"
+              "title": "1. ESC1 - Misconfigured 'Client Authentication' Templates"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7. Credential Access/3 .OS Credential Dumping.md",
+                "file": "13. Microsoft SQL Server/3.  Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 .OS Credential Dumping"
+              "title": "3.  Privilege Escalation"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12. Kerberoas/1.  Unconstrained Delegation.md",
+                "file": "12. Kerberoas/2. Constrained Delegation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.  Unconstrained Delegation"
+              "title": "2. Constrained Delegation"
             }
           },
           {
@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7. Credential Access/1 .Credentials from Web Browsers.md",
+                "file": "CRTO EXAM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 .Credentials from Web Browsers"
+              "title": "CRTO EXAM"
             }
           },
           {
@@ -111,16 +111,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CRTO EXAM.md",
+                "file": "User Impersonation Lab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CRTO EXAM"
+              "title": "User Impersonation Lab"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -287,35 +287,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "5d3cfa78f7aa22aa",
+  "active": "8ca9de6eb181ba7a",
   "lastOpenFiles": [
-    "Pasted image 20261024102914.png",
-    "Pasted image 20261024103231.png",
+    "9. Discovery/2. BOFHound.md",
+    "13. Microsoft SQL Server/3.  Privilege Escalation.md",
+    "13. Microsoft SQL Server/2.  Linked Servers.md",
+    "13. Microsoft SQL Server/1.  Code Execution.md",
+    "10. Lateral Movement/3. Custom Techniques.md",
     "CRTO EXAM.md",
     "User Impersonation Lab.md",
+    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
     "Exam.md",
-    "8. User Impersonation/1 .Token Impersonation.md",
+    "LDAP queries.md",
     "Untitled.md",
+    "7. Credential Access/1 .Credentials from Web Browsers.md",
+    "12. Kerberoas/2. Constrained Delegation.md",
+    "12. Kerberoas/1.  Unconstrained Delegation.md",
+    "8. User Impersonation/1 .Token Impersonation.md",
+    "7. Credential Access/3 .OS Credential Dumping.md",
+    "Pasted image 20261024102914.png",
+    "Pasted image 20261024103231.png",
     "8. User Impersonation/0 .Intoduction.md",
     "8. User Impersonation/3 .Pass the Ticket.md",
     "12. Kerberoas/1.2.  S4U2self Computer Takeover.md",
     "10. Lateral Movement/1.  Windows Remote Management.md",
-    "12. Kerberoas/1.  Unconstrained Delegation.md",
     "8. User Impersonation/2 .Pass the Hash.md",
     "7. Credential Access/4 .Kerberos Tickets.md",
-    "7. Credential Access/1 .Credentials from Web Browsers.md",
-    "10. Lateral Movement/3. Custom Techniques.md",
-    "7. Credential Access/3 .OS Credential Dumping.md",
-    "13. Microsoft SQL Server/2.  Linked Servers.md",
     "4 .Post Exploitation/3. All Notes.md",
     "4 .Post Exploitation/2. Session Passing.md",
     "7. Credential Access/2 .Windows Credential Manager.md",
-    "12. Kerberoas/2. Constrained Delegation.md",
-    "13. Microsoft SQL Server/1.  Code Execution.md",
     "13. Microsoft SQL Server/0. Introduction (enumeration).md",
-    "14. Domain Dominance/3.  DPAPI Backup Key.md",
-    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
-    "11. Pivoting/1. SOCKS.md",
     "17. AppLocker",
     "16. Forest & Domain Trusts",
     "15. Active Directory Certificate Services",

