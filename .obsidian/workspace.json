@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "User Impersonation Lab.md",
+                "file": "16. Forest & Domain Trusts/3. Inbound Trust.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "User Impersonation Lab"
+              "title": "3. Inbound Trust"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "15. Active Directory Certificate Services/6. Golden Certificates.md",
+                "file": "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6. Golden Certificates"
+              "title": "2.  Parent, Child Trusts"
             }
           },
           {
@@ -55,26 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12. Kerberoas/1.  Unconstrained Delegation.md",
+                "file": "7. Credential Access/4 .Kerberos Tickets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.  Unconstrained Delegation"
-            }
-          },
-          {
-            "id": "ded6ea245522c1f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8. User Impersonation/2 .Pass the Hash.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 .Pass the Hash"
+              "title": "4 .Kerberos Tickets"
             }
           },
           {
@@ -92,7 +78,7 @@
             }
           },
           {
-            "id": "3754418324f3d12a",
+            "id": "59752ee85204deb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -106,21 +92,49 @@
             }
           },
           {
+            "id": "3754418324f3d12a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "17. AppLocker/0. Introduction.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "0. Introduction"
+            }
+          },
+          {
             "id": "5d3cfa78f7aa22aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "16. Forest & Domain Trusts/3. Inbound Trust.md",
+                "file": "7. Credential Access/3 .OS Credential Dumping.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Inbound Trust"
+              "title": "3 .OS Credential Dumping"
+            }
+          },
+          {
+            "id": "3f9e25e692ea351e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "User Impersonation Lab.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "User Impersonation Lab"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -154,7 +168,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "lsas",
+                "query": "--hostname",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -287,36 +301,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "fb3d18a17bc0e449",
+  "active": "5d3cfa78f7aa22aa",
   "lastOpenFiles": [
-    "15. Active Directory Certificate Services/5. ESC8 - NTLM Relay to ADCS HTTP Endpoints.md",
-    "15. Active Directory Certificate Services/4. ESC4 - Certificate Template Access Control.md",
-    "15. Active Directory Certificate Services/3. ESC2 - Misconfigured 'Any Purpose' Templates.md",
-    "15. Active Directory Certificate Services/2. ESC3 - Misconfigured 'Certificate Request Agent' Templates.md",
-    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
-    "13. Microsoft SQL Server/3.  Privilege Escalation.md",
+    "7. Credential Access/2 .Windows Credential Manager.md",
+    "7. Credential Access/1 .Credentials from Web Browsers.md",
+    "12. Kerberoas/4.  Resource-Based Constrained Delegation.md",
+    "12. Kerberoas/2. Constrained Delegation.md",
     "12. Kerberoas/1.  Unconstrained Delegation.md",
+    "15. Active Directory Certificate Services/1. ESC1 - Misconfigured 'Client Authentication' Templates.md",
+    "CRTO EXAM.md",
     "10. Lateral Movement/3. Custom Techniques.md",
     "16. Forest & Domain Trusts/3. Inbound Trust.md",
     "User Impersonation Lab.md",
-    "CRTO EXAM.md",
-    "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
-    "7. Credential Access/4 .Kerberos Tickets.md",
-    "9. Discovery/0. Introduction.md",
     "16. Forest & Domain Trusts/2.  Parent, Child Trusts.md",
-    "12. Kerberoas/1.2.  S4U2self Computer Takeover.md",
-    "12. Kerberoas/2. Constrained Delegation.md",
-    "16. Forest & Domain Trusts/1. Inter-Realm Tickets.md",
-    "16. Forest & Domain Trusts/0. Introduction.md",
-    "9. Discovery/2. BOFHound.md",
-    "13. Microsoft SQL Server/2.  Linked Servers.md",
     "13. Microsoft SQL Server/1.  Code Execution.md",
-    "Exam.md",
-    "LDAP queries.md",
-    "Untitled.md",
-    "7. Credential Access/1 .Credentials from Web Browsers.md",
-    "Pasted image 20261024102914.png",
+    "7. Credential Access/3 .OS Credential Dumping.md",
+    "8. User Impersonation/2 .Pass the Hash.md",
+    "8. User Impersonation/1 .Token Impersonation.md",
+    "7. Credential Access/0 .Introduction.md",
+    "7. Credential Access/4 .Kerberos Tickets.md",
+    "15. Active Directory Certificate Services/2. ESC3 - Misconfigured 'Certificate Request Agent' Templates.md",
+    "15. Active Directory Certificate Services/3. ESC2 - Misconfigured 'Any Purpose' Templates.md",
+    "15. Active Directory Certificate Services/4. ESC4 - Certificate Template Access Control.md",
+    "15. Active Directory Certificate Services/5. ESC8 - NTLM Relay to ADCS HTTP Endpoints.md",
+    "16. Forest & Domain Trusts/4. Outbound Trust ( we are trusting).md",
+    "13. Microsoft SQL Server/3.  Privilege Escalation.md",
+    "13. Microsoft SQL Server/2.  Linked Servers.md",
+    "1 .Defence Evasion/Defence Evasion.md",
+    "9. Discovery/2. BOFHound.md",
     "Pasted image 20261024103231.png",
+    "Pasted image 20261024102914.png",
     "17. AppLocker",
     "16. Forest & Domain Trusts",
     "15. Active Directory Certificate Services",
